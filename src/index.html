@@ -35,6 +35,11 @@
    </header>
    <main>
          <section name="section" class="carouselSec">
+            <div class="section__mobile">
+               <div class="section__mobile-title">Рекламное агенство полного цикла</div>
+               <div class="section__mobile-text">Cоберем и упакуем ваш продукт</div>
+               <button class="gradient-btn">Хочу</button>
+            </div>
             <img src="./assets/decorUp.png" class="carousel__decor-up"/>
             <div class="carousel">
                <div class="carousel__list">
@@ -131,29 +136,37 @@
             </div>
             <div class="services__cards">
                <div class="employee-card">
-                  <div class="employee-card__title">Маркетолог</div>
-                  <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  <div class="employee-card__box">
+                     <div class="employee-card__title">Маркетолог</div>
+                     <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  </div>                  
                   <div class="empoyee__boxImg">
                      <img src="./assets/search.png" alt="icon" class="employee-card__img">
                   </div>
                </div>
                <div class="employee-card">
-                  <div class="employee-card__title">Редактор</div>
-                  <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  <div class="employee-card__box">
+                     <div class="employee-card__title">Редактор</div>
+                     <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  </div>                  
                   <div class="empoyee__boxImg">
                      <img src="./assets/writing.png" alt="icon" class="employee-card__img">
                   </div>
                </div>
                <div class="employee-card">
-                  <div class="employee-card__title">Дизайнер</div>
-                  <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  <div class="employee-card__box">
+                     <div class="employee-card__title">Дизайнер</div>
+                     <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  </div>                  
                   <div class="empoyee__boxImg">
                      <img src="./assets/design.png" alt="icon" class="employee-card__img">
                   </div>                  
                </div>
                <div class="employee-card">
-                  <div class="employee-card__title">Разработчик</div>
-                  <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  <div class="employee-card__box">
+                     <div class="employee-card__title">Разработчик</div>
+                     <div class="employee-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus quam lorem amet pellentesque nulla. Eleifend bibendum mollis sed magna fermentum consectetur diam.</div>
+                  </div>                  
                   <div class="empoyee__boxImg">
                      <img src="./assets/code.png" alt="icon" class="employee-card__img">
                   </div>                  
@@ -181,10 +194,16 @@
                      Не любите формы ?<br> 
                      Напишите нам  <a class="contacts__text-link" href="mailto:hello@cormarket.ru">hello@cormarket.ru</a></div>
                </div>
-               <form class="contacts__form">
-                  <input id="name" name="name" type="text" class="contacts__form-input" placeholder="Как к вам обращаться ">
-                  <input id="phone" name="phone" type="text" class="contacts__form-input" placeholder="Телефон для связи">
-                  <input id="email" name="email" type="text" class="contacts__form-input" placeholder="Ваша почта">
+               <form name="feedback__form" class="contacts__form">
+                  <label class="contacts__form-label">
+                     <input id="name" name="name" type="text" class="contacts__form-input" placeholder="Как к вам обращаться ">
+                  </label>                  
+                  <label class="contacts__form-label">
+                     <input id="phone" name="phone" type="text" class="contacts__form-input" placeholder="Телефон для связи">
+                  </label>                  
+                  <label class="contacts__form-label">
+                     <input id="email" name="email" type="text" class="contacts__form-input" placeholder="Ваша почта">
+                  </label>
                   <button class="gradient-btn">Заказать звонок</button>
                </form>
             </div>
