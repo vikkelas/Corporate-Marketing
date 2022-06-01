@@ -2,10 +2,12 @@ export default class Slider {
   constructor() {
     this.conteiner = document.querySelector('#slider__cont');
     this.slide = [...document.querySelectorAll('.slider__slide')];
+    this.sliderItem = document.querySelector('.services__cards');
     this.viewSize = this.slide[0].clientWidth;
     this.index = 0;
     this.clone = null;
     this.active = false;
+    this.moveItem = document.querySelector('.employee-card');
   }
 
   initSlider() {
@@ -38,6 +40,29 @@ export default class Slider {
       this.slideStart();
     });
   }
+
+  // touchSlider() {
+  //   const margin = window.getComputedStyle(this.moveItem, null).getPropertyValue('margin-right');
+  //   const numberMargin = Number(margin.replace(/[^0-9\.]/g, '')) * 2;
+  //   const scrollRel = this.sliderItem.scrollWidth - document.body.clientWidth;
+  //   const widthItem = this.moveItem.clientWidth + numberMargin;
+  //   let startTouch = null;
+  //   let endTouch = null;
+  //   let indexMove = 0;
+  //   this.sliderItem.addEventListener('touchstart', (e) => {
+  //     startTouch = e.changedTouches[0].clientX;
+  //   });
+  //   this.sliderItem.addEventListener('touchend', (e) => {
+  //     endTouch = e.changedTouches[0].clientX;
+  //     if (startTouch > endTouch && indexMove > -scrollRel) {
+  //       console.log(indexMove);
+  //       console.log(-scrollRel);
+  //       indexMove -= widthItem;
+  //       this.sliderItem.style.transform = `translateX(${indexMove}px)`;
+  //     }
+  //   });
+  //   // transform: translateX(-100 px);
+  // }
 
   eventRemove() {
     this.index = 0;

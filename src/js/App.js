@@ -13,6 +13,9 @@ const maskOptions = {
 };
 const mask = IMask(inputTell, maskOptions);
 const slider = new Slider();
+// if (window.screen.width <= 767) {
+//   slider.touchSlider();
+// }
 initCarousel();
 slider.initSlider();
 validChange();
