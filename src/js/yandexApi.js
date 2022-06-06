@@ -9,7 +9,7 @@ const coorCenter = {
 };
 
 const icon = {
-  noPhone: [95, 129],
+  noPhone: [45, 60],
   phone: [25, 29],
 };
 const state = {

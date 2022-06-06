@@ -30,18 +30,27 @@
    position: absolute;
    top: 0;
 }
+.carousel__item-light{
+   background-color:#F3F3F3;
+}
 .carousel__title{
    line-height: 7rem;
    font-size: 6rem;
    font-weight: 700;
    color:#fff;
 }
-
+.carousel__item-light>.carousel__title{
+   color:#1F2023;
+}
 .carousel__text{
    margin-top: 3.1rem;
    font-size: 3.6rem;
    font-weight: 500;
-   color:hsla(0, 0%, 100%, 0.5)
+   color:rgba(255, 255, 255, 0.502)
+}
+.carousel__item-light>.carousel__text{
+   color:rgba(31, 32, 35, 0.5);
+
 }
 
 .carousel__item>.gradient-btn{

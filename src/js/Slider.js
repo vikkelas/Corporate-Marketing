@@ -1,13 +1,15 @@
 export default class Slider {
   constructor() {
+    this.dots = document.querySelectorAll('.slider-card__dot');
     this.conteiner = document.querySelector('#slider__cont');
     this.slide = [...document.querySelectorAll('.slider__slide')];
+    this.itemCard = [...document.querySelectorAll('.employee-card')];
     this.sliderItem = document.querySelector('.services__cards');
+    this.sliderTouch = document.querySelector('.slider-card');
     this.viewSize = this.slide[0].clientWidth;
     this.index = 0;
     this.clone = null;
     this.active = false;
-    this.moveItem = document.querySelector('.employee-card');
   }
 
   initSlider() {
@@ -41,28 +43,41 @@ export default class Slider {
     });
   }
 
-  // touchSlider() {
-  //   const margin = window.getComputedStyle(this.moveItem, null).getPropertyValue('margin-right');
-  //   const numberMargin = Number(margin.replace(/[^0-9\.]/g, '')) * 2;
-  //   const scrollRel = this.sliderItem.scrollWidth - document.body.clientWidth;
-  //   const widthItem = this.moveItem.clientWidth + numberMargin;
-  //   let startTouch = null;
-  //   let endTouch = null;
-  //   let indexMove = 0;
-  //   this.sliderItem.addEventListener('touchstart', (e) => {
-  //     startTouch = e.changedTouches[0].clientX;
-  //   });
-  //   this.sliderItem.addEventListener('touchend', (e) => {
-  //     endTouch = e.changedTouches[0].clientX;
-  //     if (startTouch > endTouch && indexMove > -scrollRel) {
-  //       console.log(indexMove);
-  //       console.log(-scrollRel);
-  //       indexMove -= widthItem;
-  //       this.sliderItem.style.transform = `translateX(${indexMove}px)`;
-  //     }
-  //   });
-  //   // transform: translateX(-100 px);
-  // }
+  touchSlider() {
+    const margin = window.getComputedStyle(this.itemCard[0], null).getPropertyValue('margin-right');
+    const numberMargin = Number(margin.replace(/[^0-9\.]/g, '')) * 2;
+    const widthWindow = document.body.clientWidth;
+    const viewNum = 2;
+    const scrollNum = 2;
+    const widthItem = widthWindow / viewNum;
+    let itemCount = viewNum;
+    let transformCount = 0;
+
+    this.itemCard.forEach((item) => {
+      item.style.minWidth = `${widthItem - numberMargin}px`;
+    });
+    this.sliderTouch.addEventListener('touchmove', (e) => {
+      const dif = (widthWindow / 2) > e.changedTouches[0].clientX;
+      if (dif && itemCount < this.itemCard.length) {
+        itemCount += scrollNum;
+        transformCount -= widthItem * scrollNum;
+        this.sliderItem.style.transform = `translateX(${transformCount}px)`;
+        this.changeDots();
+      }
+      if (!dif && itemCount !== viewNum) {
+        itemCount -= scrollNum;
+        transformCount += widthItem * scrollNum;
+        this.sliderItem.style.transform = `translateX(${transformCount}px)`;
+        this.changeDots();
+      }
+    });
+  }
+
+  changeDots() {
+    this.dots.forEach((item) => {
+      item.classList.toggle('slider-card__dot--active');
+    });
+  }
 
   eventRemove() {
     this.index = 0;
