@@ -15,7 +15,6 @@ const gradientBtn = document.querySelectorAll('.gradient-btn');
 const submitThem = () => {
   let them = 'dark';
   btnSwitch.addEventListener('click', (e) => {
-    const sliderItem = document.querySelectorAll('.slider__item');
     them !== 'dark' ? them = 'dark' : them = 'light';
     e.currentTarget.classList.toggle('switch-btn--on');
     body.classList.toggle('light');
@@ -54,14 +53,6 @@ const submitThem = () => {
       }
       if (them === 'light') {
         item.classList.add('boxmain-light');
-      }
-    });
-    sliderItem.forEach((item) => {
-      if (them === 'dark') {
-        item.classList.remove('slider__item--light');
-      }
-      if (them === 'light') {
-        item.classList.add('slider__item--light');
       }
     });
     carousel.forEach((item) => {

@@ -1,7 +1,7 @@
 import {
   formValid,
 } from './valid';
-
+const btnScrollForm = document.getElementsByName('scrollForm');
 const logoHeader = document.querySelector('#logoHeader');
 const menu = document.querySelector('.menu');
 const menuList = document.querySelector('.menu__list');
@@ -32,6 +32,17 @@ const eventMenu = () => {
   });
 };
 
+const eventScrollForm = () => {
+  btnScrollForm.forEach((item) => {
+    item.addEventListener('click',() => {
+      document.querySelector('#contacts').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  });
+};
+
 const changeActiveMenuHome = () => {
   if (scrollDist < carousel.clientHeight) {
     menuItem.forEach((item) => {
@@ -51,7 +62,9 @@ const togleMenu = () => {
   menu.classList.remove('menu--active');
   header.classList.remove('header--mobile');
 };
-closeBtn.addEventListener('click', () => togleMenu());
+if (closeBtn) {
+  closeBtn.addEventListener('click', () => togleMenu());
+}
 const submitMenu = () => {
   menuItem.forEach((item) => {
     item.addEventListener('click', (e) => {
@@ -148,6 +161,7 @@ const event = () => {
   submitMenu();
   submitScroll();
   submitForm();
+  eventScrollForm();
 };
 
 export {

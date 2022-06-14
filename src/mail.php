@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 // Файлы phpmailer
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -22,7 +22,9 @@ $mail->Port= 2525;
 
 
 $mail->setFrom('admin@mynavilab.ru'); // Адрес самой почты и имя отправителя
-$mail->addAddress('bass89@mail.ru'); 
+$mail->addAddress('hello@cormarket.ru'); 
+$mail->addAddress('rziankin.i@gmail.com'); 
+$mail->addAddress('bass89@mail.ru');
 $mail->isHTML(true); 
 // Формирование самого письма
 $mail->Subject = "Заявка с сайта Corporate Marketing";

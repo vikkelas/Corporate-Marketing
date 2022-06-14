@@ -1,5 +1,6 @@
 @import 'zeroing';
 @import 'carousel';
+@import 'privacy';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap');
 
 body {
@@ -38,7 +39,7 @@ body {
    position: absolute;
    left: 0;
    bottom: -2rem;
-   color: rgb(214, 106, 106);   
+   color: rgb(214, 106, 106);
    text-align: center;
 }
 .modalWindow {
@@ -110,7 +111,7 @@ color:rgba(31, 32, 35, 1);
    margin-top: 7rem;
    justify-content: space-between;
    align-items: center;
-   font-size: 2rem; 
+   font-size: 2rem;
 }
 .header--mobile{
    justify-content: center;
@@ -123,6 +124,9 @@ color:rgba(31, 32, 35, 1);
 }
 .light>.header--mobile{
    background-color:#ffffff;
+}
+.light>.header--mobile>.menu>.mobile-menu__box svg>path{
+   fill: rgb(0, 0, 0);
 }
 
 .mobile-menu__box{
@@ -179,7 +183,7 @@ color:rgba(31, 32, 35, 1);
 .light-menu>.menu__item--active{
    color:rgba(31, 32, 35, 1);
 }
-.menu__item:nth-child(n+1){   
+.menu__item:nth-child(n+1){
    margin-top: 1rem;
 }
 .menu__link{
@@ -219,7 +223,7 @@ color:rgba(31, 32, 35, 1);
    background-color:#F3DCD4;
    box-shadow: 0px 0px 14px 3px rgba(255, 255, 255, 0.43);
    transition: background 0.2s linear, transform 0.2s linear;
-  
+
 
 }
 .switch-btn--on{
@@ -275,7 +279,7 @@ main{
 }
 .decor-line{
    justify-self: flex-end;
-   margin-left: 13rem; 
+   margin-left: 13rem;
    max-width: 100rem;
    width: 100%;
    height: 0.1rem;
@@ -283,7 +287,7 @@ main{
 }
 .box-main{
    margin-top: 15rem;
-   display: flex; 
+   display: flex;
    align-items:center;
 }
 .box-main__decorImg{
@@ -294,7 +298,7 @@ main{
 .box-main__textDecor{
    position: relative;
    display: flex;
-  
+
 }
 .box-main__decor{
    background-color: #1F2023;
@@ -362,7 +366,7 @@ main{
 .slider__cont{
    display: flex;
 }
-.slider__slide{  
+.slider__slide{
    display: flex;
 }
 .slider__item{
@@ -607,7 +611,7 @@ main{
    }
    .header{
       padding: 0 5rem;
-   }  
+   }
    .carousel{
       height: 50rem;
    }
@@ -635,7 +639,7 @@ main{
    .services__info{
       margin-top: 25rem;
    }
-   
+
 
 }
 
@@ -656,7 +660,7 @@ main{
       left: -4%;
       top: -5%;
       transform: rotate(352deg);
-   }   
+   }
    .carousel__decor-down{
       bottom: -30%;
       transform: rotate(8deg);
@@ -784,10 +788,10 @@ main{
    }
    .section__mobile>.gradient-btn{
       margin-top: 5rem;
-   } 
+   }
    .aboutUs{
       margin-top: 15rem;
-   } 
+   }
    .decor-line{
       height: 0.15rem;
       margin-left: 2rem;
@@ -918,10 +922,10 @@ main{
    }
    .section__mobile>.gradient-btn{
       margin-top: 5rem;
-   } 
+   }
    .aboutUs{
       margin-top: 15rem;
-   } 
+   }
    .decor-line{
       height: 0.15rem;
       margin-left: 2rem;
@@ -1099,7 +1103,7 @@ main{
    .box-main__decorImg--marginLeft{
       transform: rotate(90deg);
       margin-left: 2.8rem;
-      max-width: 12.3rem;  
+      max-width: 12.3rem;
    }
    .box-main__decorImg--marginRight{
    -webkit-transform: scaleX(-1);
@@ -1119,7 +1123,7 @@ main{
    }
    .slider{
       margin-top: 8.5rem;
-   } 
+   }
    .slider__item{
       padding: 10rem 6rem;
       width: 20rem;
@@ -1217,7 +1221,7 @@ main{
    }
    .contacts__form{
       margin-top: 5rem;
-   }  
+   }
    .map{
       margin-top: 10rem;
    }
@@ -1249,7 +1253,7 @@ main{
       line-height: 2.6rem;
       font-size: 1.7rem;
    }
-   
+
    .footer{
       padding: 3rem;
       flex-direction: column;

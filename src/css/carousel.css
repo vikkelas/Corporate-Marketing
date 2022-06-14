@@ -1,5 +1,5 @@
 /* carousel */
-.carousel{ 
+.carousel{
    display: flex;
    align-items:flex-start;
    height: 45rem;
@@ -60,24 +60,32 @@
 div[data-pos="0"] {
    z-index: 5;
  }
- 
+
  div[data-pos="-1"] {
-   transform: translateX(13%) scale(.9);
+   opacity: 0.8;
+   filter: blur(0.4rem);
+   transform: translateX(20%) scale(.9);
    z-index: 4;
  }
- 
+
  div[data-pos="1"] {
-   transform: translateX(-13%) scale(.9);
+   opacity: 0.8;
+   filter: blur(0.4rem);
+   transform: translateX(-20%) scale(.9);
    z-index: 4;
  }
- 
+
  div[data-pos="-2"] {
-   transform: translateX(25%) scale(.8);
+   opacity: 0.6;
+   filter: blur(0.8rem);
+   transform: translateX(40%) scale(.8);
    z-index: 3;
  }
- 
+
 div[data-pos="2"] {
-   transform: translateX(-25%) scale(.8);
+  opacity: 0.6;
+  filter: blur(0.8rem);
+   transform: translateX(-40%) scale(.8);
    z-index: 3;
  }
 

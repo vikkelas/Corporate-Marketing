@@ -15,7 +15,10 @@ const inputTell = document.querySelector('#phone');
 const maskOptions = {
   mask: '+{7}(000)000-00-00',
 };
-const mask = IMask(inputTell, maskOptions);
+if (inputTell) {
+  const mask = IMask(inputTell, maskOptions);
+}
+
 const slider = new Slider();
 if (window.screen.width <= 767) {
   slider.touchSlider();

@@ -6,7 +6,7 @@ export default class Slider {
     this.itemCard = [...document.querySelectorAll('.employee-card')];
     this.sliderItem = document.querySelector('.services__cards');
     this.sliderTouch = document.querySelector('.slider-card');
-    this.viewSize = this.slide[0].clientWidth;
+    this.viewSize = null;
     this.index = 0;
     this.clone = null;
     this.active = false;
@@ -28,6 +28,9 @@ export default class Slider {
   }
 
   slideStart() {
+    if (this.slide) {
+      this.viewSize = this.slide[0].clientWidth;
+    }
     this.conteiner.style.transition = 'transform 30s linear';
     this.conteiner.style.transform = `translateX(${-(this.viewSize)}px)`;
   }

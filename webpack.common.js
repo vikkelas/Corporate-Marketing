@@ -57,6 +57,10 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new HtmlWebPackPlugin({
+      template: './src/privacy_policy.html',
+      filename: './privacy_policy.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
